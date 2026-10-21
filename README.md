@@ -4,10 +4,12 @@ Pamplona / Iruña, Spain · working fully remote · willing to travel · open to
 [LinkedIn](https://www.linkedin.com/in/cesar-zubillaga-beraza) ·
 [zubillagaberazacesar.com](https://zubillagaberazacesar.com)
 
-Twelve years building software, the last six keeping it running. I came into platform
-engineering from application development and never put the code down, so I debug the
-service and the cluster underneath it with the same hands: Kubernetes, GitOps, Terraform
-and observability on one side; Python, TypeScript and PHP on the other.
+**Six years as a software developer**, then six keeping software running. I shipped
+production application code — PHP and Symfony backends, Angular and React frontends,
+ecommerce and bespoke internal tooling — before I moved into platform engineering, and I
+never put the code down, so I debug the service and the cluster underneath it with the
+same hands: Python, TypeScript and PHP on one side; Kubernetes, GitOps, Terraform and
+observability on the other.
 
 **The CV is at [zubillagaberazacesar.com](https://zubillagaberazacesar.com)** — or open [`index.html`](index.html) locally, and print it to PDF.
 
