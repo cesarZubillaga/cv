@@ -1,6 +1,6 @@
 # César Zubillaga Beraza — Platform & DevOps Engineer
 
-Pamplona / Iruña, Spain · open to remote (EU / US)
+Pamplona / Iruña, Spain · working fully remote · open to EU / US
 [info@zbc.space](mailto:info@zbc.space) ·
 [LinkedIn](https://www.linkedin.com/in/cesar-zubillaga-beraza) ·
 [zbc.space](https://zbc.space)
