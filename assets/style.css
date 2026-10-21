@@ -1,0 +1,154 @@
+/* César Zubillaga — CV. No dependencies, prints to a clean 2-page PDF. */
+
+:root {
+  --ink:        #15181d;
+  --ink-soft:   #4a5260;
+  --ink-faint:  #767f8d;
+  --rule:       #e2e5ea;
+  --bg:         #ffffff;
+  --bg-soft:    #f6f7f9;
+  --accent:     #0f6b63;
+  --accent-bg:  #e6f2f0;
+  --measure:    58rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink:       #e8eaee;
+    --ink-soft:  #a8b0bd;
+    --ink-faint: #79828f;
+    --rule:      #2a2f38;
+    --bg:        #14161a;
+    --bg-soft:   #1b1e24;
+    --accent:    #5fcdc0;
+    --accent-bg: #16302d;
+  }
+}
+:root[data-theme="dark"] {
+  --ink: #e8eaee; --ink-soft: #a8b0bd; --ink-faint: #79828f;
+  --rule: #2a2f38; --bg: #14161a; --bg-soft: #1b1e24;
+  --accent: #5fcdc0; --accent-bg: #16302d;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page { max-width: var(--measure); margin: 0 auto; padding: 4rem 16px 6rem; }
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-style: dotted; }
+
+/* ---------- header ---------- */
+
+header { margin-bottom: 3rem; }
+
+h1 {
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 .4rem;
+}
+
+.role {
+  font-size: clamp(1.05rem, 3vw, 1.2rem);
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 0 .25rem;
+}
+
+.where { color: var(--ink-faint); margin: 0 0 1.25rem; font-size: .95rem; }
+
+.contact { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; font-size: .95rem; margin: 0; padding: 0; list-style: none; }
+
+.summary { font-size: 1.05rem; color: var(--ink-soft); max-width: 46rem; margin: 1.75rem 0 0; }
+.summary strong { color: var(--ink); font-weight: 600; }
+
+/* ---------- sections ---------- */
+
+section { margin-top: 3.25rem; }
+
+h2 {
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--ink-faint);
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+  padding-bottom: .6rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+h3 { font-size: 1.05rem; margin: 0; font-weight: 650; letter-spacing: -0.01em; }
+
+/* ---------- highlights ---------- */
+
+.cards { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr)); }
+
+.card { background: var(--bg-soft); border: 1px solid var(--rule); border-radius: 10px; padding: 1.1rem 1.2rem; }
+.card b { display: block; font-size: 1.5rem; letter-spacing: -0.02em; color: var(--accent); margin-bottom: .2rem; }
+.card span { font-size: .9rem; color: var(--ink-soft); }
+
+/* ---------- experience ---------- */
+
+.job { margin-bottom: 2.5rem; break-inside: avoid; }
+.job:last-child { margin-bottom: 0; }
+
+.job-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem 1rem; }
+.job-head .when { color: var(--ink-faint); font-size: .88rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.at { color: var(--ink-soft); font-weight: 400; }
+.place { color: var(--ink-faint); font-size: .88rem; margin: .2rem 0 .75rem; }
+
+.job ul { margin: .75rem 0 0; padding-left: 1.1rem; }
+.job li { margin-bottom: .4rem; color: var(--ink-soft); }
+.job li::marker { color: var(--ink-faint); }
+
+.stint { margin-top: 1.25rem; padding-left: 1rem; border-left: 2px solid var(--rule); }
+.stint .job-head h3 { font-size: .98rem; }
+
+.earlier { font-size: .95rem; color: var(--ink-soft); }
+.earlier li { margin-bottom: .5rem; }
+
+/* ---------- project ---------- */
+
+.project { border: 1px solid var(--rule); border-radius: 12px; padding: 1.75rem; background: var(--bg-soft); }
+.project > p:first-of-type { margin-top: .5rem; }
+
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 0; font-size: .92rem; }
+th, td { text-align: left; padding: .55rem .75rem .55rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { color: var(--ink-faint); font-weight: 600; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+td:first-child { white-space: nowrap; font-weight: 600; }
+td { color: var(--ink-soft); }
+tr:last-child td { border-bottom: 0; }
+
+.writeups { list-style: none; padding: 0; margin: 0; display: grid; gap: .9rem; }
+.writeups li { padding-left: 1.1rem; border-left: 2px solid var(--accent-bg); }
+.writeups p { margin: .2rem 0 0; color: var(--ink-soft); font-size: .93rem; }
+
+/* ---------- skills ---------- */
+
+.skills { display: grid; gap: 1.25rem 2.5rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
+.skills dt { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-faint); font-weight: 700; margin-bottom: .3rem; }
+.skills dd { margin: 0; color: var(--ink-soft); font-size: .95rem; }
+
+footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); color: var(--ink-faint); font-size: .85rem; display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between; }
+
+/* ---------- print ---------- */
+
+@media print {
+  :root { --ink: #000; --ink-soft: #222; --ink-faint: #555; --rule: #ccc; --bg: #fff; --bg-soft: #fff; --accent: #0f6b63; }
+  body { font-size: 10.5pt; line-height: 1.45; }
+  .page { padding: 0; max-width: none; }
+  section { margin-top: 1.5rem; break-inside: avoid-page; }
+  .card, .project { border-color: #ddd; }
+  a { color: #000; text-decoration: none; }
+  .no-print { display: none; }
+}
