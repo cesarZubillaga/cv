@@ -3,14 +3,14 @@
 Pamplona / Iruña, Spain · working fully remote · willing to travel · open to EU / US
 [info@zbc.space](mailto:info@zbc.space) ·
 [LinkedIn](https://www.linkedin.com/in/cesar-zubillaga-beraza) ·
-[zbc.space](https://zbc.space)
+[zubillagaberazacesar.com](https://zubillagaberazacesar.com)
 
 Twelve years building software, the last six keeping it running. I came into platform
 engineering from application development and never put the code down, so I debug the
 service and the cluster underneath it with the same hands: Kubernetes, GitOps, Terraform
 and observability on one side; Python, TypeScript and PHP on the other.
 
-**The CV is [`index.html`](index.html)** — open it in a browser, or print it to PDF.
+**The CV is at [zubillagaberazacesar.com](https://zubillagaberazacesar.com)** — or open [`index.html`](index.html) locally, and print it to PDF.
 
 ## Incident write-ups
 
